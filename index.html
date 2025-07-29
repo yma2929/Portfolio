@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yamam's Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+ <link rel="icon" type="image/png"  sizes = "32x32" href="./media/favicon.jpg">
+
+
+ <style>
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 5%;
+      /* background: rgba(30, 27, 38, 0.9); */
+      position: fixed;
+      width: 100%;
+      top: 5px;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+    
+    .logo {
+      font-family: 'Fraunces', serif;
+      font-size: 1.5rem;
+      color: #d3fc72;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    
+    .navbar a {
+      color: #f0f0f0;
+      text-decoration: none;
+      margin-left: 30px;
+      font-size: 1rem;
+      transition: color 0.3s;
+      position: relative;
+    }
+    
+    .navbar a::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #d3fc72;
+      transition: width 0.3s;
+    }
+    
+    .navbar a:hover {
+      color: #d3fc72;
+    }
+    
+    .navbar a:hover::before {
+      width: 100%;
+    }
+    
+ </style>
+
+</head>
+<body>
+
+    <header class="header">
+            <a href="./index.html" class="logo">My Portfolio</a>
+            <nav class='navbar'>
+                <a href='./mainpage.html'>About Me</a>
+                <a href='./projectsFinal.html#projects'>Projects</a>
+                <a href='./projectsFinal.html#certificates'>Certificates</a>
+                <a href='./projectsFinal.html#courses'>Courses</a>
+                <a href='#'>Contact Me</a>
+
+            </nav>
+
+    </header>
+
+
+    
+  <div class="center-container">
+    <div class="icons">
+      <a href = "https://github.com/yma2929" target="_blank"><img src="./media/index/GitHub.jpg" alt="Code Icon"></a>
+      <a href = "https://linkedin.com/in/yamam-alkhamesi-9b752a318" target="_blank"><img src="./media/index/linkedin.jpg" alt="User Icon"></a>
+      <a href = "https://x.com/ceocoder5?s=21" target="_blank"><img src="./media/index/x.jpg" alt="GitHub Icon"></a>
+    </div>
+    <div class="icon">
+    <h1><span>Welcome To My</span><br><span class="highlight">Portfolio Website</span>  <img src="./media/index/logo.jpg" alt="Logo" ></h1>
+    </div>
+
+    <a href="./mainpage.html" class="custom-button">
+  Click to continue
+  <img src="./media/index/nextbutton.jpg" alt="Next Button">
+</a>
+    
+  </div>
+
+    
+
+</body>
+</html>

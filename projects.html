@@ -1,0 +1,262 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+</head>
+<style>
+  .card {
+    position: relative;
+    list-style: none;
+    width: 220px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px;
+    background-size: 350px;
+    background-position: center;
+    transform-origin: bottom;
+    transform: scale(1) translateZ(0);
+    transition: transform 0.4s ease, background-size 0.4s ease;
+}
+
+.card:hover .card-background {
+    transform: scale(1.15) translateZ(0);
+    background-size: 250px;
+}
+
+.card-title, .card-description {
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.card-container:hover > .card:not(:hover) .card-background,
+.card-container:hover > .card:not(:hover) .card-title {
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+    transform: scale(0.95);
+}
+
+.card-container:hover > .card:not(:hover) {
+    transform: scale(0.9);
+    transition: transform 0.4s ease;
+}
+
+</style>
+<body>
+
+    <header class="header">
+            <a href="#" class="logo">My Portfolio</a>
+            <nav class='navbar'>
+                <a href='#'>About Me</a>
+                <a href='#'>Projects</a>
+                <a href='#'>Certificates</a>
+                <a href='#'>Courses</a>
+                <a href='#'>Contact Me</a>
+
+            </nav>
+
+    </header>
+
+    <section class="projects-container">
+        <div class='project-cards'>
+
+          <div class="card-container">
+             <div class="card">
+                 <div class="card-background" ></div>
+                 <div class="content">
+                     <h2 class="card-title">Project Title</h2>
+                     <p class="card-description">This is a brief description of the project. It highlights the main features and technologies used.</p>
+                     <a href="#" class="card-link">View Project</a>
+                 </div>
+         </div>
+         </div>
+
+
+       <div class="card-container">
+                 <div class="card">
+                 <div class="card-background" ></div>
+                 <div class="content">
+                     <h2 class="card-title">Project Title</h2>
+                     <p class="card-description">This is a brief description of the project. It highlights the main features and technologies used.</p>
+                     <a href="#" class="card-link">View Project</a>
+                 </div>
+        </div>
+         </div> 
+ </div>
+    </section>
+
+
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yamam's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/projects.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+ <link rel="icon" type="image/png"  sizes = "32x32" href="./media/favicon.jpg">
+
+
+
+
+    <script>
+        function showTab(tabId) {
+  const contents = document.querySelectorAll('.tab-content');
+  const buttons = document.querySelectorAll('.tab-button');
+
+  contents.forEach(content => {
+    content.classList.remove('active');
+  });
+
+  buttons.forEach(btn => {
+    btn.classList.remove('active');
+  });
+
+  document.getElementById(tabId).classList.add('active');
+  event.target.classList.add('active');
+}
+
+    </script>
+</head>
+<body>
+
+    <header class="header">
+            <a href="./index.html" class="logo">My Portfolio</a>
+            <nav class='navbar'>
+                <a href='#'>About Me</a>
+                <a href='#'>Projects</a>
+                <a href='#'>Certificates</a>
+                <a href='#'>Courses</a>
+                <a href='#'>Contact Me</a>
+
+            </nav>
+
+    </header>
+
+  <div class="container">
+
+    <div class="tab-menu">
+      <button class="tab-item active" onclick="showTab('projects')">Projects</button>
+      <button class="tab-item" onclick="showTab('courses')">Courses</button>
+      <button class="tab-item" onclick="showTab('certificates')">Certificates</button>
+    </div>
+<div class="tab-content active" id="projects">
+      <div class="card">
+        <h3>The Recipes Hub</h3>
+        <p>Full-stack website that promotes healthy eating habits.</p>
+        <a href="https://github.com/yma2929/The-recipes-hub" target="_blank" class="link">View Project</a>
+      </div>
+      <!-- <div class="card">
+        <h3>TechLinker</h3>
+        <p>TechLinker is an AI-powered platform that intelligently matches students with tech projects, competitions, and collaborators based on their skills, interests, and career goals.</p>
+        <a href="#" target="_blank" class="link" >View Project</a>
+      </div> -->
+
+      <div class="card">
+        <h3>Gen Game</h3>
+        <p>An AI-driven platform that enhances gaming experiences by analyzing player behavior to generate personalized strategies, challenges, and in-game recommendations.</p>
+        <a href="https://github.com/yma2929/Gen-game" target="_blank" class="link" >View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>BookFinder</h3>
+        <p>BookFinder is a smart search platform that helps users quickly locate academic and non-academic books across libraries, stores, and online sources based on keywords, subject, or author.</p>
+        <a href="https://github.com/yma2929/book-finder" target="_blank" class="link" >View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>E-Voting System Analysis</h3>
+        <p>A detailed requirements engineering case study that analyzed and documented the goals, stakeholders, and functional specifications of a proposed e-voting system to ensure secure and efficient digital elections.</p>
+        <a href="https://github.com/yma2929/E-voting-System-Analysis" target="_blank" class="link" >View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>My Personal Resume</h3>
+        <p>A versatile Software Engineering student with hands-on experience in full-stack development, AI-based solutions, and system analysis, passionate about creating impactful tech-driven projects.</p>
+        <a href="https://github.com/yma2929/My-Personal-Resume" target="_blank" class="link" >View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>PillMate</h3>
+        <p>PillMate is an IoT-based smart pill dispenser using the ESP32, LCD, IR sensors, and Telegram alerts to ensure timely medication intake with audio reminders and pill tracking.</p>
+        <a href="https://github.com/Rawnaa-19/Pill-Mate-Meds-on-Time" target="_blank" class="link" >View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>ALU</h3>
+        <p>A simulated 4-bit Arithmetic Logic Unit (ALU) designed to perform basic arithmetic and logical operations like addition and subtraction, demonstrating fundamental CPU datapath functionality.</p>
+        <a href="https://github.com/yma2929/ALU" target="_blank" class="link" >View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>Resort Managment System</h3>
+        <p>A relational database system designed to streamline resort operations by managing guest information, bookings, room availability, staff details, and service records using structured SQL queries.</p>
+        <a href="https://github.com/yma2929/Resort-Management-Database" target="_blank" class="link" >View Project</a>
+      </div>
+
+
+    </div>
+
+    <div class="tab-content" id="courses">
+      <div class="card">
+        <h3>REC Camp | مشورة للبحث والابتكار </h3>
+        <p>A hands-on educational camp where I collaborated with peers on real-world engineering and technology challenges, enhancing my problem-solving, teamwork, and technical skills through workshops, coding sessions, and project-based learning.</p>
+      </div>
+      <div class="card">
+        <h3>Artificial Intelligence Fundamentals Guided Learning with Capstone | 2Q June 2025 |English</h3>
+        <p>An introductory course by IBM that provided a comprehensive foundation in Artificial Intelligence concepts, including machine learning, neural networks, and AI ethics, with practical insights into real-world applications.</p>
+      </div>
+      <div class="card">
+        <h3>UI/UX Design Camp | IEEE</h3>
+        <p>A focused camp dedicated to user interface (UI) design, where I gained practical skills in creating visually appealing and functional digital interfaces through layout design, color theory, and typography.</p>
+      </div>
+      <div class="card">
+        <h3>Introduction to Image Generating using AI |SDC| المجتمع السعودي للمطورين</h3>
+        <p>An introductory course exploring AI-powered image generation techniques, where I learned how to create visuals using models like DALL·E by crafting effective prompts and understanding the fundamentals of generative AI.</p>
+      </div>
+    </div>
+
+    <div class="tab-content" id="certificates">
+      <div class="card">
+        <h3>Artificial Intelligence Fundamentals Guided Learning with Capstone | 2Q June 2025 |English</h3>
+        <a href="#" target="_blank" class="link">View Certificate</a>
+      </div>
+      <div class="card">
+        <h3>Introduction to Image Generating using AI |SDC| المجتمع السعودي للمطورين</h3>
+        <a href="#" target="_blank" class="link">View Certificate</a>
+      </div>
+      <div class="card">
+        <h3>SKAI Hackthon | SADAIA & TUWAIQ ACADEMY</h3>
+        <a href="#" target="_blank" class="link">View Certificate</a>
+      </div>
+      <div class="card">
+        <h3>Digital UJ Transformation Hachathon | University of Jeddah</h3>
+        <a href="#" target="_blank" class="link">View Certificate</a>
+      </div>
+    </div> 
+
+  </div>
+</body>
+</html>

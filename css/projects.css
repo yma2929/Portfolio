@@ -1,0 +1,204 @@
+
+ body {
+  font-family: Arial, sans-serif;
+  background: #1e1b26;
+  margin: 0;
+  padding: 0;
+}
+
+
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 20px 5%;
+    background-color: #c8c4c4;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 32px;
+    color: black;
+    font-weight: 600;
+}
+.navbar a{
+    position:relative;
+    font-size: 20px;
+    color:blueviolet;
+    font-weight: 500;
+    margin-left: 40px;
+
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    top:100%;
+    left:0;
+    background-color: rgb(124, 122, 126);
+    transition: .3s;
+}
+
+.navbar a:hover::before{
+    
+    width: 100%;
+    
+}
+
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+
+.tab-content {
+  display: none;
+  margin-top: 20px;
+}
+
+.tab-content.active {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #fefefe;
+  border: 1px solid #020202;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  color: #342066;
+  margin-bottom: 10px;
+  
+}
+
+.card p {
+  color: #555;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+color:#d72657;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+
+.tab-menu {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 100px;
+}
+
+.tab-item {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 15px 10px;
+  color: #000000;
+  background-color: #d3fc72;
+  border-radius: 30px 60px;
+  font-family:"Fraunces";
+
+}
+
+.tab-item::before,
+.tab-item::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #f8f8f8;
+  transition: 0.4s ease;
+}
+
+.tab-item::before {
+  top: 0;
+  left: 0;
+}
+
+.tab-item::after {
+  bottom: 0;
+  right: 0;
+  left: auto;
+}
+
+.tab-item:hover::before {
+  width: 100%;
+}
+
+.tab-item:hover::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+.card {
+    position: relative;
+    list-style: none;
+    width: 220px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px;
+    background-size: 350px;
+    background-position: center;
+    transform-origin: bottom;
+    transform: scale(1) translateZ(0);
+    transition: transform 0.4s ease, background-size 0.4s ease;
+}
+
+.card:hover .card-background {
+    transform: scale(1.15) translateZ(0);
+    background-size: 250px;
+}
+
+.card-title, .card-description {
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.card-container:hover > .card:not(:hover) .card-background,
+.card-container:hover > .card:not(:hover) .card-title {
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+    transform: scale(0.95);
+}
+
+.card-container:hover > .card:not(:hover) {
+    transform: scale(0.9);
+    transition: transform 0.4s ease;
+}
+
